@@ -1,3 +1,4 @@
+import mulherHero from "@/images/mulher-hero.png"
 export default function Hero2() {
     return(
         <div className="flex sm:flex-row flex-col justify-center items-center w-[100%] p-5 gap-2">
