@@ -19,14 +19,14 @@ export default function CardapioItem(props: CardapioItemProps): JSX.Element {
             <Image src={blackBurguer} alt={props.descricao} width={200} height={200}/>
         </div>
         <div className="mx-2 my-0 flex flex-row items-center justify-start">
-            <p className="font-black mr-10 ml-0">{props.preco}</p>
+            <p className="font-black mr-10 ml-0 text-xl">{props.preco}</p>
             <div className="flex flex-row m-2">
                 <span className="mx-1 bg-gray-300 rounded-md flex flex-row">
                     <button className="p-2">-</button>
                     <p className="p-2">0</p>
                     <button className="p-2">+</button>
                 </span>
-                <button className="bg-red-700 rounded-md p-1 mx-1 p-1"><IconShoppingCart className="text-white font-black"/></button>
+                <button className="bg-red-700 rounded-md p-1 mx-1"><IconShoppingCart className="text-white font-black"/></button>
             </div>
         </div>
     </div>
