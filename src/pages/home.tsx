@@ -1,5 +1,6 @@
 import Cards1 from "@/components/Cards1";
 import Hero1 from "@/components/Hero1";
+import Hero2 from "@/components/Hero2";
 import Navegacao from "@/components/Navegacao";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
             <Navegacao>
                 <Hero1/>
                 <Cards1/>
+                <Hero2/>
             </Navegacao>
         </div>
     )
