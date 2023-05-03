@@ -6,7 +6,7 @@ export default function Hero2() {
                 (IMAGEM)
             </div>
             <div className="w-1/2">
-                <h1>Nossos produtos são 100% originais</h1>
+                <h1 className="text-2xl">Nossos produtos são 100% originais</h1>
                 <p>Nosso delivery é mais rápido que descongelar aquela comida</p>
                 <button>Ver Cardápio</button>
             </div>
