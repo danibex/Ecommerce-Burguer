@@ -22,10 +22,10 @@ export default function CardapioItem(props: CardapioItemProps): JSX.Element {
         atualizarPreco()
     }
     function atualizarPreco() {
-        quantidade >=1 ? setValor(valor = props.preco * quantidade) : ""
+        setValor(valor = props.preco * quantidade)
     }
-     return(
-    <div className="flex flex-col my-8 mx-1/2 shadow-xl p-3 rounded-md">
+    return(
+        <div className="flex flex-col my-8 mx-1/2 shadow-xl p-3 rounded-md">
         <div className="m-3">
             <h2 className="text-lg text-red-600 font-semibold m-1">{props.nome}</h2>
             <h1 className="text-2xl font-black w-[80%] m-1">{props.descricao}</h1>

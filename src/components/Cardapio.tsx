@@ -1,6 +1,6 @@
 import CardapioItem from "./CardapioItem"
 import { produtos } from '@/data/Produtos'
-
+import TotalCarrinho from "./TotalCarrinho"
 export default function Cardapio() {
     const estiloLinhaCardapio = "flex flex-col sm:flex-row justify-center items-center py-10 px-2 gap-5"
     return(
@@ -12,6 +12,7 @@ export default function Cardapio() {
                 )
             })}
         </div>
+        <TotalCarrinho/>
     </>
     )
 }
