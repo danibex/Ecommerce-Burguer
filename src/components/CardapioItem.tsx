@@ -2,7 +2,7 @@ import { IconShoppingCart } from "@tabler/icons-react"
 import Image from "next/image"
 import blackBurguer from "@/images/black-burguer.png"
 import { useState } from "react"
-import TotalCarrinho from "./TotalCarrinho"
+
 interface CardapioItemProps {
     onStateChange(valor: any): unknown
     valorTotal?: number
