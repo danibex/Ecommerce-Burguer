@@ -8,7 +8,7 @@ interface LoginProps {
 
 }
 
-export default (props: LoginProps) => {
+export default function Login(props: LoginProps) {
     return(
         <div className="flex md:flex-row flex-col gap-2 flex-nowrap justify-center items-center text-center h-[100vh]">
             <div  className="w-1/2 md:h-[100%] flex flex-nowrap justify-center items-center text-center">

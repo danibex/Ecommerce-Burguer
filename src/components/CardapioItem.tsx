@@ -4,6 +4,8 @@ import blackBurguer from "@/images/black-burguer.png"
 import { useState } from "react"
 import TotalCarrinho from "./TotalCarrinho"
 interface CardapioItemProps {
+    onStateChange(valor: any): unknown
+    valorTotal?: number
     id: number
     nome: string
     descricao: string
@@ -20,12 +22,16 @@ export default function CardapioItem(props: CardapioItemProps) {
     }
     function diminuir() {
         quantidade >=1 ? setQuantidade(--quantidade) : ""
-        
         atualizarPreco()
     }
     function atualizarPreco() {
         setValor(valor = props.preco * quantidade)
     }
+    function adicionarValorAoTotal() {
+        props.onStateChange(valor);
+    }
+
+    
 
     return(
         <div className="flex flex-col my-8 mx-1/2 shadow-xl p-3 rounded-md">
@@ -44,7 +50,7 @@ export default function CardapioItem(props: CardapioItemProps) {
                     <p className="p-2" >{quantidade}</p>
                     <button className="p-2" onClick={acrescentar}>+</button>
                 </span>
-                <button className="bg-red-700 rounded-md p-1 mx-1"><IconShoppingCart className="text-white font-black"/></button>
+                <button className="bg-red-700 rounded-md p-1 mx-1" onClick={adicionarValorAoTotal}><IconShoppingCart className="text-white font-black"/></button>
             </div>
         </div>
     </div>
