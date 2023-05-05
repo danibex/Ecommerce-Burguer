@@ -10,8 +10,8 @@ export const produtos = [
     {
         id: 2,
         nome: "Hamburguer",
-        descricao: "Black Angus Burguer",
-        preco: 15,
+        descricao: "Black Angus Burguer 2",
+        preco: 20,
         url: {blackBurguer}
     },
     {

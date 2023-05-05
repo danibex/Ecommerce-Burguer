@@ -14,7 +14,7 @@ interface CardapioItemProps {
 }
 export default function CardapioItem(props: CardapioItemProps) {
 
-    let [quantidade, setQuantidade] = useState(0)
+    let [quantidade, setQuantidade] = useState(1)
     let [valor, setValor] = useState(props.preco)
     
     function acrescentar() {
