@@ -7,13 +7,11 @@ import Menu from "./Menu";
 interface NavegacaoProps {
     children: any
 }
-
-export default function Navegacao(props: NavegacaoProps) {
-    
-    const [toggle, setToggle] = useState(false)
-    const toggleMenu = () => {
-        setToggle(!toggle)
-    }
+export default function Navegacao(props: NavegacaoProps) {   
+const [toggle, setToggle] = useState(false)
+const toggleMenu = () => {
+    setToggle(!toggle)
+}
 
     return(
         <>
@@ -23,7 +21,7 @@ export default function Navegacao(props: NavegacaoProps) {
             <Link className="ml-[-15px] flex justify-center items-center" href="/home"><Image src={logoMenor} alt="Logo Menor Hambuguer"width={100} height={100}/></Link>
             </div>
             <nav className="hidden sm:flex justify-center items-center">
-                <ul className="flex flex-row">
+                <ul className="flex flex-row justify-center items-center">
                     <Menu/>
                 </ul>
             </nav>
@@ -35,7 +33,7 @@ export default function Navegacao(props: NavegacaoProps) {
         
             <div>
             <nav className={`${toggle ? "flex" : "hidden"} flex-col justify-center items-center`}>
-                <ul className="flex flex-col">
+                <ul className="flex flex-col justify-center items-center">
                     <Menu/>
                 </ul>
             </nav>

@@ -15,7 +15,7 @@ export default function Home() {
                 <Hero2/>
                 <CardsPromo/>
                 <Cardapio/>
-                <Image className="w-[100%]" src={logoPizza} alt="Logo pizza estendida"/>
+                <Image className="w-[100%] h-[250px]" src={logoPizza} alt="Logo pizza estendida"/>
             </Navegacao>
         </div>
     )

@@ -1,6 +1,5 @@
 import { IconBaguette } from "@tabler/icons-react";
 import CardsItem from "./CardsItem";
-
 export default function Cards1() {
     return(
         <div className="flex flex-col sm:flex-row justify-center items-center w-[100%] p-10">
@@ -10,4 +9,3 @@ export default function Cards1() {
         </div>
     )
 }
-
