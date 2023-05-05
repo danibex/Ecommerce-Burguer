@@ -1,8 +1,13 @@
 import CardapioItem from "./CardapioItem"
 import { produtos } from '@/data/Produtos'
 import TotalCarrinho from "./TotalCarrinho"
+import { useState } from "react"
 export default function Cardapio() {
     const estiloLinhaCardapio = "flex flex-col sm:flex-row justify-center items-center py-10 px-2 gap-5"
+    const [total, setTotal] = useState(0)
+    function mudarTotal() {
+                
+    }
     return(
     <>
         <div className={`${estiloLinhaCardapio} flex-wrap`}>
