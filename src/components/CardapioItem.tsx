@@ -2,6 +2,7 @@ import { IconShoppingCart } from "@tabler/icons-react"
 import Image from "next/image"
 import blackBurguer from "@/images/black-burguer.png"
 import { useState } from "react"
+import TotalCarrinho from "./TotalCarrinho"
 interface CardapioItemProps {
     id: number
     nome: string
@@ -9,7 +10,8 @@ interface CardapioItemProps {
     preco: number
     url: any
 }
-export default function CardapioItem(props: CardapioItemProps): JSX.Element {
+export default function CardapioItem(props: CardapioItemProps) {
+
     let [quantidade, setQuantidade] = useState(0)
     let [valor, setValor] = useState(props.preco)
     function acrescentar() {
@@ -24,6 +26,7 @@ export default function CardapioItem(props: CardapioItemProps): JSX.Element {
     function atualizarPreco() {
         setValor(valor = props.preco * quantidade)
     }
+
     return(
         <div className="flex flex-col my-8 mx-1/2 shadow-xl p-3 rounded-md">
         <div className="m-3">
