@@ -1,4 +1,4 @@
-import { IconShoppingCart } from "@tabler/icons-react"
+import { IconShoppingCartPlus } from "@tabler/icons-react"
 import Image from "next/image"
 import blackBurguer from "@/images/black-burguer.png"
 import { useState } from "react"
@@ -16,6 +16,7 @@ export default function CardapioItem(props: CardapioItemProps) {
 
     let [quantidade, setQuantidade] = useState(0)
     let [valor, setValor] = useState(props.preco)
+    
     function acrescentar() {
         quantidade >=0 ? setQuantidade(++quantidade) : ""
         atualizarPreco()
@@ -24,11 +25,14 @@ export default function CardapioItem(props: CardapioItemProps) {
         quantidade >=1 ? setQuantidade(--quantidade) : ""
         atualizarPreco()
     }
+    
     function atualizarPreco() {
         setValor(valor = props.preco * quantidade)
     }
     function adicionarValorAoTotal() {
-        props.onStateChange(valor);
+        let valorAcumulado
+        quantidade ? valorAcumulado = valor : valorAcumulado = 0
+        props.onStateChange(valorAcumulado);
     }
 
     
@@ -50,7 +54,7 @@ export default function CardapioItem(props: CardapioItemProps) {
                     <p className="p-2" >{quantidade}</p>
                     <button className="p-2" onClick={acrescentar}>+</button>
                 </span>
-                <button className="bg-red-700 rounded-md p-1 mx-1" onClick={adicionarValorAoTotal}><IconShoppingCart className="text-white font-black"/></button>
+                <button className="bg-red-700 rounded-md p-1 mx-1" onClick={adicionarValorAoTotal}><IconShoppingCartPlus className="text-white font-black"/></button>
             </div>
         </div>
     </div>
