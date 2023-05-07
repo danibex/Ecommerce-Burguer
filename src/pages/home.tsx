@@ -7,7 +7,7 @@ import Image from "next/image";
 import logoPizza from "@/images/logo-pizza-estendida.png"
 export default function Home() {
     return(
-        <div className="h-[100vh] p-1">
+        <div className="h-[100vh] p-1 m-0">
             <Navegacao>
                 <Hero1/>
                 <Cards1/>
