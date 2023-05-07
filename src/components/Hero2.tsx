@@ -1,5 +1,6 @@
 import mulherHero from "@/images/mulher-hero.png"
 import Image from "next/image"
+import Link from "next/link";
 
 export default function Hero2() {
     const estiloBotao = "flex justify-center items-center bg-red-700 text-white text-lg rounded-lg mx-4 my-6 w-[200px] h-[50px]"
@@ -16,7 +17,7 @@ export default function Hero2() {
             <div className="w-1/2 sm:w-[100%] sm:block flex flex-col justify-center items-center">
                 <h1 className="text-2xl font-black my-8 w-[70%]">Nossos produtos são 100% originais</h1>
                 <p className="my-8 w-[70%]">Nosso delivery é mais rápido que descongelar aquela comida</p>
-                <button onClick={scrollToCardapio} className={`my-8 ${estiloBotao}`}>Ver Cardápio</button >
+                <Link href="/cardapio" className={`my-8 ${estiloBotao}`}>Ver Cardápio</Link >
             </div>
         </div>
     )

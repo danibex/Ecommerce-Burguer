@@ -1,3 +1,4 @@
+import Cardapio from "@/components/Cardapio";
 import Cards1 from "@/components/Cards1";
 import CardsPromo from "@/components/CardsPromo";
 import Hero1 from "@/components/Hero1";
@@ -9,11 +10,7 @@ export default function Home() {
     return(
         <div className="h-[100vh] p-1">
             <Navegacao>
-                <Hero1/>
-                <Cards1/>
-                <Hero2/>
-                <CardsPromo/>
-                <Image className="w-[100%] h-[250px] mt-32" src={logoPizza} alt="Logo pizza estendida"/>
+                <Cardapio/>
             </Navegacao>
         </div>
     )
