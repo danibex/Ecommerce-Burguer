@@ -4,12 +4,16 @@ import blackBurguer from "@/images/black-burguer.png"
 import { useState } from "react"
 interface CardapioItemProps {
     onStateChange(valor: any): unknown
+    funcaoReceberQuantidadeENome(quantidade: number, nome: string, preco: number) : unknown
+    
+    produtosAcumulados?: any
     valorTotal?: number
     id: number
     nome: string
     descricao: string
     preco: number
     url: any
+
 }
 export default function CardapioItem(props: CardapioItemProps) {
 let [quantidade, setQuantidade] = useState(1)
@@ -27,9 +31,10 @@ function atualizarPreco() {
     setValor(valor = props.preco * quantidade)
 }
 function adicionarValorAoTotal() {
-    let valorAcumulado
+    let valorAcumulado = 0
     quantidade ? valorAcumulado = valor : valorAcumulado = 0
     props.onStateChange(valorAcumulado);
+    props.funcaoReceberQuantidadeENome(quantidade, props.nome, props.preco)
 }
 return(
     <div className="flex flex-col my-8 mx-1/2 shadow-xl p-3 rounded-md">
