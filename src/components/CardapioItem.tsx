@@ -1,6 +1,5 @@
 import { IconShoppingCartPlus } from "@tabler/icons-react"
 import Image from "next/image"
-import blackBurguer from "@/images/black-burguer.png"
 import { useState } from "react"
 interface CardapioItemProps {
     onStateChange(valor: any): unknown
@@ -39,11 +38,11 @@ function adicionarValorAoTotal() {
 return(
     <div className="flex flex-col my-8 mx-1/2 shadow-xl p-3 rounded-md">
     <div className="m-3">
-        <h2 className="text-lg text-red-600 font-semibold m-1">{props.nome}</h2>
-        <h1 className="text-2xl font-black w-[80%] m-1">{props.descricao}</h1>
+        <h2 className="text-2xl text-red-600 font-semibold m-1">{props.nome}</h2>
+        <h1 className="text-lg font-black w-[80%] m-1">{props.descricao}</h1>
     </div>
-    <div className="flex justify-center items-center">
-        <Image src={blackBurguer} alt={props.descricao} width={200} height={200}/>
+    <div className="flex justify-center items-center w-[200px] h-[200px]">
+        <Image src={props.url} alt={props.descricao} width={200} height={200}/>
     </div>
     <div className="mx-2 my-0 flex flex-row items-center justify-start">
         <p className="font-black mr-10 ml-0 text-xl">R$ {valor},00</p>
