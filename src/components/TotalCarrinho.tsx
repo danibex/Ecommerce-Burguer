@@ -1,5 +1,7 @@
-import { IconArrowBadgeDownFilled, IconArrowBadgeUpFilled, IconArrowsDiagonalMinimize2, IconShoppingCart, IconTrash, IconWindowMinimize } from "@tabler/icons-react"
+import { IconArrowsDiagonalMinimize2, IconShoppingCart, IconTrash } from "@tabler/icons-react"
+import Link from "next/link";
 import { useState } from "react";
+
 
 interface TotalCarrinhoProps {
    valorTotal: number
@@ -51,7 +53,7 @@ export default function TotalCarrinho(props: TotalCarrinhoProps) {
                 <div className="flex sm:flex-col flex-row justify-between sm:justify-center items-center mt-2 w-[100%]">
                     <p className="font-semibold pb-0 pt-2 text-3xl">R$ {props.valorTotal},00</p>
                     <div className="flex flex-row items-center justify-center">
-                    <button className={`${estiloBotao} w-[180px]`}>Finalizar</button>
+                    <Link href="/finalizar" className={`${estiloBotao} w-[180px]`}>Finalizar</Link>
                     <button className={`${estiloBotao} w-[50px]`} onClick={props.limpar}><IconTrash/></button>
                     </div>
                 </div>
