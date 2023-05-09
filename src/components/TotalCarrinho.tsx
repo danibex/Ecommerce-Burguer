@@ -1,4 +1,4 @@
-import { IconArrowBadgeDownFilled, IconArrowBadgeUpFilled, IconTrash } from "@tabler/icons-react"
+import { IconArrowBadgeDownFilled, IconArrowBadgeUpFilled, IconArrowsDiagonalMinimize2, IconShoppingCart, IconTrash, IconWindowMinimize } from "@tabler/icons-react"
 import { useState } from "react";
 
 interface TotalCarrinhoProps {
@@ -10,21 +10,20 @@ interface TotalCarrinhoProps {
 const estiloBotao = "flex justify-center items-center bg-red-700 text-white text-lg rounded-lg mx-1 my-6 h-[50px]"
 
 export default function TotalCarrinho(props: TotalCarrinhoProps) {    
-    const [aberto, setAberto] = useState(false)
+    const [aberto, setAberto] = useState(true)
 
     function removerProduto(posicao: number, quantidade: number) {
         props.removerProduto(posicao, quantidade)
     }
     function abrirFechar() {
         setAberto(!aberto)
-        console.log(aberto)
     }
     return(
         <>
-        <div className={`${props.valorTotal == 0 ? "hidden" : "flex"} p-3 bg-white sm:w-[300px] w-[100%] sm:h-auto fixed sm:flex-col flex-row justify-around sm:justify-center items-center sm:rounded-lg shadow-lg sm:bottom-2 sm:right-2 right-0 bottom-0 sm:border border-t border-black`}>
+        <div className={`${props.valorTotal != 0 && aberto ? "flex" : "hidden"} p-3 bg-white sm:w-[300px] w-[100%] sm:h-auto fixed sm:flex-col flex-row justify-around sm:justify-center items-center sm:rounded-lg shadow-lg sm:bottom-2 sm:right-2 right-0 bottom-0 sm:border border-t border-black`}>
             <div className="flex flex-col w-[100%] justify-center items-center">
-                <div className="flex sm:hidden justify-end items-end w-[100%]">
-                    <button onClick={abrirFechar}>{aberto ? <IconArrowBadgeDownFilled size={40}/> : <IconArrowBadgeUpFilled size={40}/>}</button>
+                <div className="flex justify-end items-end w-[100%]">
+                    <button onClick={abrirFechar}>{aberto ? <IconArrowsDiagonalMinimize2 className="text-red-700" size={30}/> : ""}</button>
                 </div>
                 <div className="flex flex-col justify-between w-[100%]">
                 <table className={`${aberto ? "flex" : "hidden"}  sm:flex flex-col justify-center items-center w-[100%]`}>
@@ -58,6 +57,10 @@ export default function TotalCarrinho(props: TotalCarrinhoProps) {
                 </div>
                 </div>
             </div>
+        </div>
+        <div className={`${aberto ? "hidden" : "block"} rounded-xl bg-black text-white fixed right-5 bottom-3 p-2`}>
+            <div className="rounded-full p-2 bg-red-600 text-white font-black flex justify-center items-center w-[20px] h-[20px] absolute mt-[-15px] ml-[-15px]">{props.produtosAcumulados.length}</div>
+            <button onClick={abrirFechar}><IconShoppingCart size={40}/></button>
         </div>
         </>
     )
