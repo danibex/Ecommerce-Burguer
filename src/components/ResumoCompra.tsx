@@ -7,12 +7,12 @@ export default function Resumo() {
                 <div className="flex flex-col justify-start items-start shadow-xl p-5 rounded-lg w-[100%] my-3">
                     <div className="flex flex-col w-[100%] m-2 p-2 justify-center items-center">
                         <div className="w-[100%] m-0 flex flex-row justify-between items-center">
-                            <div><Image src={oClassico} width={100} alt="Produto"/></div>
-                            <div className="flex w-[100%] flex-row items-center mx-3 justify-start">
+                            <div className="w-[10%]"><Image src={oClassico} width={100} alt="Produto"/></div>
+                            <div className="flex w-[60%] flex-row items-center mx-3 justify-start">
                                 <h2 className="mx-1">Nome</h2>
                                 <h2 className="ml-[60%]">8</h2>
                             </div>
-                            <div className="flex flex-col items-center justify-center w-[100px]">
+                            <div className="flex flex-col items-center justify-center w-[10%]">
                                 <h1 className="whitespace-no-wrap font-black">R$ 20,00</h1>
                                 <button><IconTrash className="text-red-700 my-1"/></button>
                             </div>
