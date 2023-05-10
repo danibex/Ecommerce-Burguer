@@ -9,11 +9,11 @@ return(
             <div className="w-[100%] m-0 flex flex-row justify-between items-center">
                 <div className="w-[10%]"><Image src={oClassico} width={100} alt="Produto"/></div>
                 <div className="flex w-[60%] flex-row items-center mx-3 justify-start">
-                    <h2 className="mx-1">Nome</h2>
-                    <h2 className="ml-[60%]">8</h2>
+                    <h2 className="mx-1">O Clássico</h2>
+                    <h2 className="ml-[60%]">1</h2>
                 </div>
                 <div className="flex flex-col items-center justify-center w-[15%]">
-                    <h1 className="whitespace-no-wrap font-black">R$ 20,00</h1>
+                    <h1 className="whitespace-no-wrap font-black">R$ 16,00</h1>
                     <button><IconTrash className="text-red-700 my-1"/></button>
                 </div>
             </div> 
@@ -23,13 +23,13 @@ return(
         </div>
         <div className="w-[100%] flex flex-col">
             <div className="flex flex-row justify-between w-[100%] text-lg">
-                <h2>Valor dos itens</h2><h2>R$ 95,00</h2>
+                <h2>Valor dos itens</h2><h2>R$ 16,00</h2>
             </div>
             <div className="flex flex-row justify-between w-[100%] text-lg">
                 <h2>Entrega</h2><h2>R$ 5,00</h2>
             </div>
             <div className="flex flex-row justify-between w-[100%] text-2xl font-bold">
-                <h1>Total</h1><h1>R$ 100,00</h1>                       
+                <h1>Total</h1><h1>R$ 21,00</h1>                       
             </div>
             <div className="w-[100%] flex justify-center items-center">
                 <button className="flex justify-center items-center bg-red-600 text-white font-bold text-lg rounded-lg mx-4 my-6 w-[200px] h-[50px]">Confirmar Pedido</button>

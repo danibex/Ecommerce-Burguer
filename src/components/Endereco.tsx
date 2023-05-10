@@ -36,7 +36,7 @@ const url = `https://viacep.com.br/ws/${cepRaw}/json/`
             <p>Informe o endereço onde deseja receber o seu pedido:</p>  
             <form onSubmit={(e) => { e.preventDefault(); preencherEndereco() }}>
                 <div className="w-[100%] flex justify-start items-center ">
-                <input onChange={FormatarCep} value={cep} className="bg-gray-200 rounded-md m-2 p-2 w-[40%]" type="text" name="CEP" id="CEP" placeholder="CEP"/>
+                <input maxLength={8} onChange={FormatarCep} value={cep} className="bg-gray-200 rounded-md m-2 p-2 w-[40%]" type="text" name="CEP" id="CEP" placeholder="CEP"/>
                 <button className="bg-red-600 text-white rounded-xl p-2 flex justify-center items-center"><IconSearch className="font-black"/></button>
                 </div>
                 <input className="bg-gray-200 rounded-md m-2 p-2 w-[95%]" type="text" name="Rua" id="Rua" placeholder="Rua" readOnly value={enderecoCompleto.logradouro}/>
