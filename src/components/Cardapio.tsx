@@ -2,9 +2,9 @@ import CardapioItem from "./CardapioItem"
 import { produtos } from '@/data/Produtos'
 import TotalCarrinho from "./TotalCarrinho"
 import { use, useState } from "react"
-const estiloLinhaCardapio = "flex flex-col sm:flex-row justify-center items-center py-10 px-2 gap-5"
+const estiloLinhaCardapio = "flex flex-col sm:flex-row justify-center items-center py-10 px-2 gap-5"  
 export default function Cardapio() {
-        let [valorTotal, setValorTotal] = useState(0)
+    let [valorTotal, setValorTotal] = useState(0)
         const [produtosAcumulados, setProdutosAcumulados] = useState<{ nome: string; quantidade: number; preco: number }[]>([])
         function adicionaValorAoTotal(value: any) {
             setValorTotal(valorTotal + value)
