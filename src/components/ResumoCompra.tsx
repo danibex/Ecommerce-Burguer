@@ -23,7 +23,7 @@ return(
         <div className="flex flex-col w-[100%] m-2 p-2 justify-center items-center">
                 {props.produtosAcumulados.map((produto: any, index: any) => {
                     return(
-                    <div className="w-[100%] m-0 flex flex-row justify-between items-center">
+                    <div className="w-[100%] m-0 flex flex-row justify-between items-center" key={index}>
                         <div className="w-[10%]">
                             <Image src={oClassico} width={100} alt="Produto"/>
                         </div>
