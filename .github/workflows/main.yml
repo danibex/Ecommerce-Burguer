@@ -1,0 +1,25 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - main  # Altere para a branch do seu projeto
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install  # Ou o comando necessário para instalar as dependências do seu projeto
+
+      - name: Build project
+        run: npm run build  # Ou o comando necessário para realizar o build do seu projeto
+
+      - name: Deploy to VPS
+        run: |
+          ssh ubuntu@ec2-18-208-214-203.compute-1.amazonaws.com "cd /home/ubuntu/Ecommerce-Burguer && git pull && pm2 restart all"
+
