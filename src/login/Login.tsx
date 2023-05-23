@@ -15,7 +15,7 @@ export default function Login(props: LoginProps) {
                 <Image src={logoGrande} alt="Entregador de pizza"/>
             </div>
             <div className="flex flex-col justify-center items-center text-center w-[50%]">
-                <Titulo>Login</Titulo>
+                <Titulo>Testando GitHubActions</Titulo>
                 <Formulario/>
                 <div className="flex justify-start text-left flex-nowrap">
                 <BotaoAncora url="http://www.google.com.br">Cadastre-se</BotaoAncora>
